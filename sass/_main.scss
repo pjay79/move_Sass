@@ -1,6 +1,9 @@
 /* * {
 	outline: 1px dotted #FF0000;
 } */
+body {
+  font-size: 62.5%;
+}
 h1, h2, a {
   font-family: 'Oswald', sans-serif;
 }
@@ -10,144 +13,96 @@ p {
 /* Main */
 .main {
   height: 600px;
-  background: url(images/bg.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include cover-background('images/bg.jpg');
   text-align: center;
-}
-.main h1 {
-  text-align: center;
-  font-size: 130px;
-  color: #FFF;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 140px 0 40px 0;
-}
-.main p {
-  text-align: center;
-  font-size: 18px;
-  color: #FFF;
-}
-.main .btn {
-  display: inline-block;
-  margin: 0 auto;
-	border-radius: 0;
-  background-color: #000;
-  color: #FFF;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-  padding: 10px 30px;
-}
-.main .btn:hover {
-	background: #FFA800;
-	cursor: pointer;
-	transition: background .5s;
+  h1 {
+    @extend %font-large;
+    font-weight: bold;
+    color: $light;
+    text-transform: uppercase;
+    margin: 140px 0 40px 0;
+  }
+  p {
+    @extend %font-x-small;
+    color: $light;
+  }
+  .btn {
+    @include rectangle-button($dark, $light, $bright);
+  }
 }
 /* Supporting */
 .supporting {
   text-align: center;
-  background-color: #000;
+  background-color: $dark;
   padding: 50px 0 80px;
-}
-.supporting h2 {
-  color: #ffa800;
-  font-size: 20px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.supporting p {
-  color: #efefef;
-  margin-bottom: 20px;
-  line-height: 20px;
-  font-size: 12px;
-}
-.supporting .btn {
-  display: inline-block;
-  margin: 0 auto;
-	border-radius: 0;
-  background-color: #EEE;
-  color: #000;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-  padding: 10px 30px;
-}
-.supporting .btn:hover {
-	background: #FFA800;
-	cursor: pointer;
-	transition: background .5s;
+  h2 {
+    @extend %font-small;
+    font-weight: bold;
+    color: $bright;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p {
+    @extend %font-x-small;
+    color: $light;
+    margin-bottom: 20px;
+    line-height: 20px;
+  }
+  .btn {
+    @include rectangle-button($light, $dark, $bright);
+  }
 }
 /* Feature */
 .feature {
   height: 600px;
-  background: url(images/feature.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include cover-background('images/feature.jpg');
   text-align: center;
-}
-.feature h2 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 600;
-  margin: 220px 0 0 0;
-  padding:50px 0 0;
+  h2 {
+    color: $light;
+    text-transform: uppercase;
+    @extend %font-medium;
+    font-weight: bold;
+    margin: 220px 0 0 0;
+    padding:50px 0 0;
+  }
 }
 /* Footer */
 .footer {
   height: 600px;
-  background: url(images/footer.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  @include cover-background('images/footer.jpg');
   text-align: center;
-}
-.footer h2 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 40px;
-  font-weight: 600;
-  margin: 200px 0 0 0;
-  padding:50px 0 0;
-}
-.footer .btn {
-  display: inline-block;
-  margin: 0 auto;
-	border-radius: 0;
-  background-color: #000;
-  color: #FFF;
-  font-size: 18px;
-  text-transform: uppercase;
-  margin: 30px 0 0 0;
-  padding: 10px 30px;
-}
-.footer .btn:hover {
-	background: #FFA800;
-	cursor: pointer;
-	transition: background .5s;
+  h2 {
+    color: $light;
+    text-transform: uppercase;
+    @extend %font-medium;
+    font-weight: bold;
+    margin: 200px 0 0 0;
+    padding: 50px 0 0;
+  }
+  .btn {
+    @include rectangle-button($light, $dark, $bright);
+  }
 }
 /* Media Queries */
 @media (min-width:768px) {
   .main h1 {
     font-size: 200px;
+    font-size: 20rem;
   }
   .feature h2 {
     font-size: 60px;
+    font-size: 6rem;
   }
   .supporting h2 {
-    font-size: 40px;
+    font-size: 60px;
+    font-size: 6rem;
   }
   .supporting p {
-    font-size: 14px;
+    font-size: 20px;
+    font-size: 2rem;
   }
   .footer h2 {
     font-size: 60px;
+    font-size: 6rem;
   }
 }
