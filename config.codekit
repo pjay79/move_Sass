@@ -2685,7 +2685,7 @@
 		"outputAbbreviatedPath": "\/images\/bg.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/feature.jpg": {
 		"fileType": 16384,
@@ -2696,7 +2696,7 @@
 		"outputAbbreviatedPath": "\/images\/feature.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/footer.jpg": {
 		"fileType": 16384,
@@ -2707,7 +2707,7 @@
 		"outputAbbreviatedPath": "\/images\/footer.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/index.html": {
 		"fileType": 8192,
