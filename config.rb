@@ -12,7 +12,7 @@ fonts_dir = "fonts"
 output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
-# relative_assets = true
+relative_assets = true
 
 line_comments = false
 color_output = false

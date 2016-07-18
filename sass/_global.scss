@@ -13,7 +13,7 @@ p {
 /* Main */
 .main {
   height: 600px;
-  @include cover-background('images/bg.jpg');
+  @include cover-background('bg.jpg');
   text-align: center;
   h1 {
     @extend %font-large;
@@ -55,7 +55,7 @@ p {
 /* Feature */
 .feature {
   height: 600px;
-  @include cover-background('images/feature.jpg');
+  @include cover-background('feature.jpg');
   text-align: center;
   h2 {
     color: $light;
@@ -69,7 +69,7 @@ p {
 /* Footer */
 .footer {
   height: 600px;
-  @include cover-background('images/footer.jpg');
+  @include cover-background('footer.jpg');
   text-align: center;
   h2 {
     color: $light;
